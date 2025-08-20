@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>saveni</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <header>
+    <h1>폐건전지, 올바르게 버리기</h1>
+  </header>
+
+  <nav>
+    <a href="https://news.sbs.co.kr/news/endPage.do?news_id=N1007704106" target="_blank">폐건전지의 위험성(뉴스)</a>
+    <a href="https://poen.co.kr/" target="_blank">관련 기업</a>
+    <a href="https://www.kbra.net" target="_blank">관련 협회</a>
+  </nav>
+
+  <section>
+    <h2>폐건전지를 그냥 버리면?</h2>
+    <div class="highlight-box">
+      <p><strong>1. 환경 오염 :</strong> <br>니켈, 카드뮴, 수은 등의 중금속이 들어있어 토양과 수질을 오염시킬 수 있다.</p>
+      <p><strong>2. 화재 및 폭발 위험 :</strong> <br>일반 쓰래기와 섞어 버리면 내부 화학물질이 반응해 화재나 폭발을 유발할 수 있다.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>리튬 배터리 화재 사고 현황 (2019 vs 2023)</h2>
+    <div class="chart-container">
+      <svg width="600" height="300">
+        <text x="150" y="290" class="label">2019</text>
+        <text x="450" y="290" class="label">2023</text>
+        <polyline class="line" points="150,240 450,80" />
+        <circle cx="150" cy="240" r="5" class="dot" />
+        <circle cx="450" cy="80" r="5" class="dot" />
+        <text x="150" y="235" class="label">51건</text>
+        <text x="450" y="75" class="label">179건</text>
+      </svg>
+    </div>
+    <div class="source">
+      ※ 출처: 소방청 국가화재정보시스템 (2019: 51건, 2023: 179건)
+    </div>
+  </section>
+
+  <section>
+    <h2>분리배출 방법</h2>
+    <img src="recycled.png" alt="분리배출 방법" class="center-image">
+  </section>
+
+  <section class="tip-box">
+    <h2>올바른 분리배출 요령</h2>
+    <table>
+      <thead>
+        <tr><th>가능</th><th>불가능</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>AA, AAA, 9V 건전지</td>
+        <td>일체형 배터리 제품</td></tr>
+        <tr><td>리튬 코인형 배터리</td>
+        <td>누액된 배터리</td></tr>
+        <tr><td>소형 전자기기 분리형 배터리</td><td>테이프 미부착 상태</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <div class="battery-toggle">
+    <button id="toggleBtn" aria-expanded="false" aria-controls="batteryContent" title="설명 보기">❗</button>
+    <section id="batteryContent" class="battery-content" hidden>
+      <h3>@건전지는 하나의 전지, 배터리는 여러 전지를 모아 만든 장치이며,<br> 건전지는 일반적으로 일회용이 많고, 배터리는 충전용이 많다.</h3>
+    </section>
+  </div>
+
+  <script>
+  const btn = document.getElementById('toggleBtn');
+  const content = document.getElementById('batteryContent');
+
+  btn.addEventListener('click', () => {
+    const isHidden = content.hasAttribute('hidden');
+    if (isHidden) {
+      content.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      content.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+  <section>
+    <h2>폐건전지 재활용</h2>
+    <img src="recycle1.jpeg" alt="폐건전지 재활용" class="center-image">
+    <h3 style="text-align: center;">폐건전지 모아서 교환하기!</h3>
+  </section>
+</body>
+</html>
 

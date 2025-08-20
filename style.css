@@ -182,3 +182,12 @@ linearGradient#gradient stop:last-child {
   background-color: #f0f7f4;
   border-radius: 5px;
 }
+
+/* 마우스 호버*/
+nav a:focus{
+  outline: 0;
+}
+
+nav a:hover{
+  background-color: #c0cfa8;
+}

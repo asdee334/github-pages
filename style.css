@@ -183,7 +183,6 @@ linearGradient#gradient stop:last-child {
   border-radius: 5px;
 }
 
-/* 마우스 호버*/
 nav a:focus{
   outline: 0;
 }

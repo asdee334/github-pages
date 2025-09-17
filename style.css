@@ -10,9 +10,9 @@ body {
 
 /* 헤더 */
 header {
-  background-color: #2d6a4f;
-  color: white;
-  padding: 20px;
+  background : linear-gradient(900deg, #2A9D8F, #4CAF50);
+  color: black;
+  padding: 15px;
   text-align: center;
 }
 
